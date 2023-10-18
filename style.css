@@ -10,8 +10,42 @@
 --Very-pale-orange: hsl(33, 100%, 98%);
 }
 
+*{
+box-sizing: border-box;
+margin: 0;
+}
+
+body{
+    background-color:var(--Cream) ;
+}
 
 main{
     font-size: 18px;
     font-family: 'DM Sans', sans-serif;
+    background-color: var(--Cream);
+
+    width: 40vw;
+    height: 80vh;
+
+    position: absolute;
+    top: 10%;
+    left: 30%;
+
+    border: 1px solid black;
+}
+
+.upper{
+    background-color: var(--red);
+    border: 1px solid black;
+}
+
+.lower{
+    background-color: var(--Very-pale-orange);
+    border: 1px solid black;
+}
+
+
+.chartContainer{
+    width: 40vw;
+    height: 40vh;
 }

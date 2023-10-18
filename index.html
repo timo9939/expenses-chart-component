@@ -13,55 +13,61 @@
     />
 
     <title>Expenses chart component</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <!-- chart.js Link -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
-
-
   <body>
     <main>
       <!-- Upper section -->
-      <section>
+      <section class="upper">
         <h4>My balance</h4>
         <h2>£921.48</h2>
       </section>
-<!-- Lower Section -->
-      <section>
+      <!-- Lower Section -->
+      <section class="lower">
         <h1>Spending - Last 7 days</h1>
 
-        <div>
+        <div class="chartContainer">
           <canvas id="chart"></canvas>
         </div>
-        
 
-        
+        <!-- Statistics Chart -->
         <script>
-          const ctx = document.getElementById('chart');
-        
+          const ctx = document.getElementById("chart");
+
           new Chart(ctx, {
-            type: 'bar',
+            type: "bar",
             data: {
-              labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat','Sun'],
-              datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                borderWidth: 1
-              }]
+              labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+              datasets: [
+                {
+                  label: "Spend for each day",
+                  data: [12, 19, 3, 5, 2, 3, 8],
+                  borderWidth: 1,
+                },
+              ],
             },
             options: {
+              responsive: true,
+              maintainAspectRatio: false,
               scales: {
-                y: {
-                  beginAtZero: true
-                }
-              }
-            }
+                yAxes: [
+                  {
+                    ticks: {
+                      beginAtZero: true,
+                    },
+                  },
+                ],
+              },
+            },
           });
-        </script>
-        
-        mon tue wed thu fri sat sun
 
+
+        </script>
+
+        <!-- Display Total Spent -->
         <article>
           <h4>Total this month</h4>
           <h1></h1>
@@ -70,10 +76,7 @@
           <small>+2.4%</small>
           <small>from last month</small>
         </article>
-
       </section>
-
-
     </main>
   </body>
 </html>
