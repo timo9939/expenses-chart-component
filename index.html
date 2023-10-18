@@ -13,30 +13,67 @@
     />
 
     <title>Expenses chart component</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- chart.js Link -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
+
+
+
   <body>
     <main>
       <!-- Upper section -->
       <section>
         <h4>My balance</h4>
-        <h2>$921.48</h2>
+        <h2>£921.48</h2>
       </section>
 <!-- Lower Section -->
       <section>
         <h1>Spending - Last 7 days</h1>
 
-        <canvas></canvas>
+        <div>
+          <canvas id="chart"></canvas>
+        </div>
+        
+
+        
+        <script>
+          const ctx = document.getElementById('chart');
+        
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat','Sun'],
+              datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
+        
         mon tue wed thu fri sat sun
 
         <article>
           <h4>Total this month</h4>
           <h1></h1>
-          $478.33
+          £478.33
 
           <small>+2.4%</small>
           <small>from last month</small>
         </article>
+
       </section>
+
+
     </main>
   </body>
 </html>
