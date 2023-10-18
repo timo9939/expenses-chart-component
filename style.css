@@ -32,6 +32,11 @@ main{
     left: 30%;
 
     border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5vh;
 }
 
 .upper{
@@ -40,23 +45,32 @@ main{
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     padding: 1em 2em;
     border-radius: 1em;
     color: white;
 }
 
-/* .upper>img{
-    float: right;
-} */
-
+/* Lower box */
 .lower{
     background-color: var(--Very-pale-orange);
     border: 1px solid black;
+    border-radius: 1em;
+
+    padding: 2em 1em;
 }
 
 
 .chartContainer{
-    width: 40vw;
-    height: 40vh;
+    position: relative;
+    width: 100%;
+    height: 30vh;
+}
+
+main hr{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    color:var(--Medium-brown) ;
+    opacity: 0.5;
 }
