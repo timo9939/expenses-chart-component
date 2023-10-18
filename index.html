@@ -1,43 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Expenses chart component</title>
+  </head>
+  <body>
+    <main>
+      <!-- Upper section -->
+      <section>
+        <h4>My balance</h4>
+        <h2>$921.48</h2>
+      </section>
+<!-- Lower Section -->
+      <section>
+        <h1>Spending - Last 7 days</h1>
 
-  My balance
-  $921.48
+        <canvas></canvas>
+        mon tue wed thu fri sat sun
 
-  Spending - Last 7 days
+        <article>
+          <h4>Total this month</h4>
+          <h1></h1>
+          $478.33
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <small>+2.4%</small>
+          <small>from last month</small>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
