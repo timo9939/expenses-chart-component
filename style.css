@@ -37,7 +37,18 @@ main{
 .upper{
     background-color: var(--red);
     border: 1px solid black;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1em 2em;
+    border-radius: 1em;
+    color: white;
 }
+
+/* .upper>img{
+    float: right;
+} */
 
 .lower{
     background-color: var(--Very-pale-orange);
