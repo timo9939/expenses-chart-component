@@ -37,33 +37,37 @@
         </div>
 
         <!-- Statistics Chart -->
+
         <script>
           const ctx = document.getElementById("chart");
-
+                    
+          // Chart js code
           new Chart(ctx, {
             type: "bar",
             data: {
               labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
               datasets: [
                 {
-                  label: "Spend for each day",
+                  label: "",
                   data: [12, 19, 3, 5, 2, 3, 8],
                   borderWidth: 1,
                 },
               ],
             },
+
             options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              scales: {
-                yAxes: [
-                  {
-                    ticks: {
-                      beginAtZero: true,
-                    },
-                  },
-                ],
-              },
+//  scales: {
+//         xAxes: [{
+//             gridLines: {
+//                 display:false
+//             }
+//         }],
+//         yAxes: [{
+//             gridLines: {
+//                 display:false
+//             }   
+//         }]
+//     }
             },
           });
 
@@ -83,5 +87,8 @@
         </article>
       </section>
     </main>
+
+
+    <script src="main.js"></script>
   </body>
 </html>
