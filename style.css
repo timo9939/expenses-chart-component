@@ -30,7 +30,7 @@ main {
   top: 10%;
   left: 30%;
 
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ main {
 
 .upper {
   background-color: var(--red);
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,7 @@ main {
 /* Lower box */
 .lower {
   background-color: var(--Very-pale-orange);
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 1em;
 
   padding: 2em 1em;
